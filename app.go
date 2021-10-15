@@ -43,7 +43,7 @@ func init() {
 	flag.StringVar(&cert, "cert", "", "give me a certificate")
 	flag.StringVar(&key, "key", "", "give me a key")
 	flag.StringVar(&ca, "cacert", "", "give me a CA chain, enforces mutual TLS")
-	flag.StringVar(&port, "port", "80", "give me a port number")
+	flag.StringVar(&port, "port", os.Getenv("PORT"), "give me a port number")
 	flag.StringVar(&name, "name", os.Getenv("WHOAMI_NAME"), "give me a name")
 }
 
